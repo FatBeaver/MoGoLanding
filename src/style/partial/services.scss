@@ -1,0 +1,31 @@
+.service {
+    padding-top: 110px;
+    padding-bottom: 120px;
+    .main-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: #333333;
+        margin-bottom: 45px;
+        &__top {
+            font-size: 24px;
+            @include kaushan;
+            font-weight: 400;
+        }
+        &__middle {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 30px;
+            @include mons;
+            margin-top: -10px;
+            margin-bottom: 30px;
+        }
+        &__line {
+            width: 60px;
+            height: 3px;
+            background-color: #f38181;
+        }
+    }
+    
+}

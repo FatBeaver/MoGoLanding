@@ -1,0 +1,25 @@
+@import "../../bower_components/normalize-css/normalize.css";
+body {
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+@mixin kaushan {
+    font-family: 'Kaushan Script', cursive;
+}
+@mixin mons {
+    font-family: 'Montserrat', sans-serif;
+}
+a {
+    text-decoration: none !important;
+    color: white;
+    &:hover {
+        color:white;
+    }
+}
+@import 'partial/header.scss';
+
+@import 'partial/about.scss';
+
+@import 'partial/facts.scss';
+
+@import 'partial/services.scss';

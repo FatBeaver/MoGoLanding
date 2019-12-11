@@ -1,0 +1,22 @@
+{
+  "name": "mogo",
+  "description": "landing page",
+  "main": "js/main.js",
+  "authors": [
+    "Insayt <childrenofbodom737@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "MogoLandingPage"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "*"
+  }
+}
