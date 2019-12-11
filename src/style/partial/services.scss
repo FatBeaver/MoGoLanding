@@ -27,5 +27,37 @@
             background-color: #f38181;
         }
     }
-    
+    .services-list {
+        display: flex;
+        justify-content: space-between;
+        &__item {
+            .service-img {
+                margin-top: 10px;
+                margin-right: 8px;
+                padding: 0 !important;
+            }
+            .service-text {
+                p:nth-child(1) {
+                    font-size: 15px;
+                    @include mons;
+                    font-weight: bold;
+                    color: #313131;
+                    text-transform: uppercase;
+                }
+            }
+            .service-text:last-child {
+                font-family: 'Roboto', sans-serif;
+                color: #999999;
+                font-size: 14px;
+            }  
+        }
+    }
+    .services-list:nth-child(2) {
+        padding-bottom: 40px !important;
+        padding-top: 10px;
+        border-bottom:1px solid rgb(211, 209, 209);
+    }
+    .services-list:nth-child(3) {
+        padding-top: 40px !important;
+    }
 }
