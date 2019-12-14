@@ -1,0 +1,13 @@
+.logos {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f8f8f8;
+    &__row {
+        align-items: center;
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

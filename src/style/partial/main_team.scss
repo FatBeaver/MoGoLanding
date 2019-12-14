@@ -1,0 +1,102 @@
+.main_team {
+    padding-top: 100px;
+    padding-bottom: 115px;
+    .main-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: #333333;
+        margin-bottom: 45px;
+        &__top {
+            font-size: 24px;
+            @include kaushan;
+            font-weight: 400;
+        }
+        &__middle {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 30px;
+            @include mons;
+            margin-top: -10px;
+            margin-bottom: 30px;
+        }
+        &__line {
+            width: 60px;
+            height: 3px;
+            background-color: #f38181;
+        }
+    }
+    .description {
+        text-align: center;
+        font-size: 15px;
+        font-family: Roboto;
+        font-weight: 400;
+        color: #999999;
+        margin-bottom: 100px;
+    }
+    .our-team {
+        &__man {
+            text-align: center;
+        }
+        &__images:hover {
+            transform: translate(-10px, -10px);
+            box-shadow: 10px 10px 1px 0px #95e1d3;
+        }
+        &__images:hover::before {
+            position: absolute;
+            content: '';
+            top:0;
+            bottom:0;
+            right:0;
+            left:0;
+            background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, 
+            rgba(243, 129, 129, 0.9) 100%);
+        }
+        &__images {
+            margin-bottom: 30px;
+            transition:0.3s ease-in-out;
+            position: relative;
+            .social {
+                position: absolute;
+                top:180px;
+                left:62px;
+                flex-direction: row;
+                display: none;
+                cursor: pointer;
+                &__item {
+                    display: flex;
+                    width:56px;
+                    height:56px;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #fce38a;
+                    i {
+                        color: #f38181;
+                        font-size: 24px;
+                    }
+                }
+                &__item:hover {
+                    background-color: #f38181;
+                }
+                &__item:hover i {
+                    color:white !important;
+                }
+            }
+        }
+        &__images:hover .social {
+            display: flex;
+        }
+        &__name {
+            color: #333333;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        &__position {
+            font-style: italic;
+            color: #999999;
+            font-family: "Roboto - Light Italic", sans-serif;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+.testiomonials{
+    padding-top: 100px;
+    padding-bottom: 120px;
+    .testimonials__row {
+        position: relative;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .testimonials-left-chevron {
+            font-size: 26px;
+            color:#999999;
+            cursor: pointer;
+            position: absolute;
+            top:75px;
+            left:-15px;
+        }
+        .testimonials-right-chevron {
+            font-size: 26px;
+            color:#999999;
+            cursor: pointer;
+            position: absolute;
+            top:75px;
+            right:-15px;
+
+        }
+        .testimonials-slider {
+            position: relative;
+            overflow: hidden;
+            &__wrapper {
+                display: flex;
+                transition: transform 0.6s ease;  
+            }
+            &__item {
+                flex: 0 0 100%; 
+                max-width: 100%;
+                margin: 0 30px;
+                align-items: center;
+            }
+        }
+    }
+    &__img {
+        width:150px;
+        height:150px;
+        padding: 25px;
+        border:2px solid #95e1d3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+    }
+    .testimonials-text {
+        &__top {
+            font-size: 24px;
+            font-family: "Roboto - Light Italic", sans-serif;
+            font-style: italic;
+            font-weight: 400;
+            color: #999999;
+        }
+        .signature {
+            display: flex;
+            flex-direction: row;
+            width:210px;
+            align-items: center;
+            &__line {
+                background-color: #f38181;
+                height:3px;
+                width:60px;
+                margin-top: -15px;
+            }
+            &__name {
+                @include kaushan;
+                font-weight: 400;
+                font-size: 24px;
+                color: #333333;
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+.people_say {
+    padding-top: 110px;
+    padding-bottom: 125px;
+    position: relative;
+    background: url(../images/say-bcg.jpg) no-repeat center;
+    background-size: cover;
+    &::before {
+        content: '';
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.81);
+    }
+    .main-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: #333333;
+        margin-bottom: 10px;
+        &__top {
+            font-size: 24px;
+            @include kaushan;
+            font-weight: 400;
+        }
+        &__middle {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 30px;
+            @include mons;
+            margin-top: -10px;
+            margin-bottom: 30px;
+        }
+        &__line {
+            width: 60px;
+            height: 3px;
+            background-color: #f38181;
+        }
+    }
+
+    .client_row {
+        margin-top: 70px;
+        .client {  
+            display: flex;
+            flex-direction: row;
+            &__img {
+                width:110px !important;
+                height: 110px !important;
+            }
+            .client-text {
+                display: flex;
+                flex-direction: column;
+                padding-left: 25px !important;
+                &__name {
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    color: #333333;
+                }
+                &__position {
+                    @include mons;
+                    color: #333333;
+                    font-size: 14px;
+                    font-weight: lighter !important;
+                    margin-top: -8px;
+                }
+                &__line {
+                    width: 60px;
+                    height: 3px;
+                    background-color: #f38181;
+                    margin-bottom: 17px;
+                    margin-top: 2px;
+                }
+                &__comment {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: #999999;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

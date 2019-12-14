@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             if (event.target.classList.contains('chevron-rotate') === true) {
                 return false;
             }
-            // === Некий незнакомец, если ты видишь этот ужас, то знай что я пытался через циклы
-            // === увы не получилось т.к js очень странный (или я слишком тупой) -_-. 
+           
             chevron[0].parentElement.nextElementSibling.classList.add('work-txt-toggle');
             chevron[0].classList.remove('chevron-rotate');
             chevron[1].parentElement.nextElementSibling.classList.add('work-txt-toggle');
@@ -21,57 +20,68 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     }
 
+    // =============== SLIDER FUNCTION ============
+    function slideMove(direction, slider, wrapper, slider_item) {
+        let mainElement = document.querySelector(slider);
+        let slideWrapper = mainElement.querySelector(wrapper);
+        let sliderItems = slideWrapper.querySelectorAll(slider_item)
+        let wrapperWidth = parseFloat(getComputedStyle(slideWrapper).width);
+        let itemWidth = parseFloat(getComputedStyle(sliderItems[0]).width);
+        let stepSlide = itemWidth / wrapperWidth * 100;
+        let countSlideItem = sliderItems.length - 1;
+
+        if (direction === "right") {
+            if (currentNumberItemTeam === countSlideItem) {
+                currentNumberItemTeam = 0;
+                transofrmValueTeam = 0;
+                slideWrapper.style.transform = 'translateX('+  transofrmValueTeam + '%)';
+            } else {
+                currentNumberItemTeam++;
+                transofrmValueTeam += stepSlide + 5;
+                slideWrapper.style.transform = 'translateX(-'+  transofrmValueTeam + '%)';
+
+            }
+        }
+        if (direction === "left") {
+            currentNumberItemTeam--;
+            if (currentNumberItemTeam < 0) {
+                transofrmValueTeam = 100 * countSlideItem;
+                currentNumberItemTeam = countSlideItem;
+                slideWrapper.style.transform = 'translateX(-'+  transofrmValueTeam + '%)';
+            } else {
+                transofrmValueTeam -= stepSlide;
+                slideWrapper.style.transform = 'translateX(-'+  transofrmValueTeam + '%)';
+            }
+        }
+    }
 
     // =============== TEAM SLIDER ================
     let leftNav = document.querySelector('.team-left-chevron');
         leftNav.onclick = function(event) {
             let direction = 'left';
-            slideMove(direction);
+            slideMove(direction, '.team-slider', '.team-slider__wrapper', '.team-slider__item');
         }
 
     let rightNav = document.querySelector('.team-right-chevron');
         rightNav.onclick = function(event) {
             let direction = 'right';
-            slideMove(direction);
+            slideMove(direction, '.team-slider', '.team-slider__wrapper', '.team-slider__item');
         }
-
-    let mainElement = document.querySelector('.team-slider');
-    let slideWrapper = mainElement.querySelector('.team-slider__wrapper');
-    let sliderItems = slideWrapper.querySelectorAll('.team-slider__item')
-    let wrapperWidth = parseFloat(getComputedStyle(slideWrapper).width);
-    let itemWidth = parseFloat(getComputedStyle(sliderItems[0]).width);
-    let transofrmValue = 0;
-    let currentNumberItem = 0;
-    let stepSlide = itemWidth / wrapperWidth * 100;
-    let countSlideItem = sliderItems.length - 1;
-
-    function slideMove(direction) {
-        if (direction === "right") {
-            if (currentNumberItem === countSlideItem) {
-                currentNumberItem = 0;
-                transofrmValue = 0;
-                slideWrapper.style.transform = 'translateX('+  transofrmValue + '%)';
         
-            } else {
-                currentNumberItem++;
-                transofrmValue += stepSlide;
-                slideWrapper.style.transform = 'translateX(-'+  transofrmValue + '%)';
-
-            }
-        }
-
-        if (direction === "left") {
-            currentNumberItem--;
-            if (currentNumberItem < 0) {
-                transofrmValue = 100 * countSlideItem;
-                currentNumberItem = countSlideItem;
-                slideWrapper.style.transform = 'translateX(-'+  transofrmValue + '%)';
-            } else {
-                transofrmValue -= stepSlide;
-                slideWrapper.style.transform = 'translateX(-'+  transofrmValue + '%)';
-            }
-        }
-    }
-
+    let transofrmValueTeam = 0;
+    let currentNumberItemTeam = 0;
     
+    //============== TESTIMONIALS SLIDER ===============
+    let leftTestimonials = document.querySelector('.testimonials-left-chevron');
+        leftTestimonials.onclick = function(event) {
+            let direction = 'left';
+            slideMove(direction, '.testimonials-slider', '.testimonials-slider__wrapper', '.testimonials-slider__item');
+        }
+
+    let rightTestimonials = document.querySelector('.testimonials-right-chevron');
+        rightTestimonials.onclick = function(event) {
+            let direction = 'right';
+            slideMove(direction, '.testimonials-slider', '.testimonials-slider__wrapper', '.testimonials-slider__item');
+        }
+   
 });
