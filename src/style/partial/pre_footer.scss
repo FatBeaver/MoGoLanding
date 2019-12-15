@@ -1,0 +1,153 @@
+.pre_footer {
+    background-color: #ffffff;
+    padding-top: 75px;
+    padding-bottom: 70px;
+    .instagram {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        &__name {
+            margin-bottom: 40px;
+            color: #333333;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        &__images {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-row-gap: 4px;
+            grid-column-gap: 1px;
+            img {
+                cursor: pointer;
+            }
+            margin-bottom: 20px;
+        }
+        &__view-more {
+            a {
+                color: #333333 !important;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .blogs {
+        &__top-text {
+            margin-bottom: 40px;
+            color: #333333;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .blog-post {
+            display: flex;
+            margin-bottom: 30px;
+            img {
+                max-width:119px !important;
+                max-height: 79px !important;
+                margin-right: 8px;
+            }
+            &__text {
+                padding-top: 8px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .post-name {
+                    text-transform: uppercase;
+                    margin-bottom: 2px;
+                    color: #333333;
+                    font-size: 13px;
+                    line-height: 18px;
+                    font-weight: 600;
+                }
+                .post-date {
+                    font-size: 12px;
+                    color: #999999;
+                    line-height: 24px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .contacts {
+        &__logo {
+            color: #cccccc;
+            font-size: 46px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+        &__text {
+            color: #999999;
+            font-size: 15px;
+            line-height: 24px;
+            font-weight: 400;
+            margin-bottom: 45px;
+        }
+        &__subscribes {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            .subscribes-count {
+                color: #333333;
+                span {
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+            .subscribes-count {
+                margin-bottom: 15px;
+                color: #333333;
+                font-size: 14px;
+            }
+            .subscribes-line {
+                width:100%;
+                height:1px;
+                background-color: #d4d1d1;
+                margin-bottom: 16px;
+            }
+            .subscribes-follow {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 38px;
+                a {
+                    color: #95e1d3 !important;
+                    font-size: 36px;
+                }
+                p {
+                    font-size: 16px;
+                    color: #999999;
+                    font-weight: 400;
+                    margin-right: 10px;
+                    display: block;
+                    width:50px !important;
+                }
+                
+            }
+        }
+        &__sand-mail {
+            form {
+                .email-input-area {
+                    display: flex;
+                    input[type="email"] {
+                        background: white;
+                        border:1px solid #e7e7e7;
+                        width:50%;
+                        padding: 10px 14px;
+                    }
+                    input[type="submit"] {
+                        background: #95e1d3;
+                        text-transform: uppercase;
+                        padding: 15px 34px;
+                        font-weight: 700;
+                        border: none;
+                        outline: none;
+                        color: white;
+                        font-size: 14px;
+                        letter-spacing: 1.2px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

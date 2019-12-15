@@ -1,0 +1,36 @@
+.map {
+    position: relative;
+    background: url(../images/map-bcg.jpg) no-repeat center;
+    background-size: cover;
+    &::before {
+        content: '';
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    padding:55px 0;
+    .map-text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color:#f38181;
+        font-weight: bold;
+        font-size: 22px;
+        &__main {
+            margin-top: -7px;
+            a {
+                color:#f38181 !important;
+            }
+        }
+        &__line {
+            width: 60px;
+            height: 3px;
+            background-color: #f38181;
+        }
+    }
+}
