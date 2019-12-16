@@ -28,6 +28,12 @@
         font-size: 14px;
         color: #ffffff;
         text-transform: uppercase;
+        &__toggle {
+            display: none;
+            font-size: 42px;
+            color:white;
+            list-style-type: none;
+        }
         &__item {
             position: relative;
             list-style-type: none;
@@ -61,7 +67,7 @@
             font-weight: 400;
         }
         &__middle {
-            font-size: 150px !important;
+            font-size: 150px;
             @include mons;
             font-weight: bold;
             text-transform: uppercase;

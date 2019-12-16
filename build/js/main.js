@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 slideWrapper.style.transform = 'translateX('+  transofrmValueTeam + '%)';
             } else {
                 currentNumberItemTeam++;
-                transofrmValueTeam += stepSlide + 5;
+                transofrmValueTeam += stepSlide;
                 slideWrapper.style.transform = 'translateX(-'+  transofrmValueTeam + '%)';
 
             }

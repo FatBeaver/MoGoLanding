@@ -1,4 +1,4 @@
-.testiomonials{
+.testiomonials {
     padding-top: 100px;
     padding-bottom: 120px;
     .testimonials__row {
@@ -34,8 +34,13 @@
             &__item {
                 flex: 0 0 100%; 
                 max-width: 100%;
-                margin: 0 30px;
                 align-items: center;
+            }
+            div[adaptive="first-tesimonials"] {
+                margin-right: 30px;
+            }
+            div[adaptive="second-tesimonials"] {
+                margin-right: 40px;
             }
         }
     }

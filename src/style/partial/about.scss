@@ -38,30 +38,12 @@
     .imagebox {
         display: flex;
         justify-content: space-between;
-        div:nth-child(1) {
-            max-width: 360px;
-            width:100%;
-            height: 275px;
-            background: url(../images/about1.png) no-repeat center;
-            background-size: cover;
-        }
-        div:nth-child(2) {
-            max-width: 360px;
-            width:100%;
-            height: 275px;
-            background: url(../images/about2.png) no-repeat center;
-            background-size: cover;
-        }
-        div:nth-child(3) {
-            max-width: 360px;
-            width:100%;
-            height: 275px;
-            background: url(../images/about3.png) no-repeat center;
-            background-size: cover;
-        }
         &__item {
             transition: 0.3s ease-in-out;
             position: relative;
+            padding-left: 0;
+            padding-right: 0;
+            max-width: 360px;
         }
         &__item:hover {
             transform: translate(-10px, -10px);

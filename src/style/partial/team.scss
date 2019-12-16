@@ -32,9 +32,17 @@
                 transition: transform 0.6s ease;  
             }
             &__item {
-                flex: 0 0 100%; 
+                flex: 0 0 110%; 
                 max-width: 100%;
-                margin: 0 30px;
+            }
+            div[adaptive="first-slide"] {
+                margin-left: 30px ;
+            }
+            div[adaptive="second-slide"] {
+                margin-left: 30px ;
+            }
+            div[adaptive="third-slide"] {
+                margin-left: 30px ;
             }
         }
     }
