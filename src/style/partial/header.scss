@@ -52,6 +52,13 @@
             }
         }
     }
+    .menu-show {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 30px;
+        font-size: 20px;
+    }
     .welcome {
         display: flex;
         flex-direction: column;
@@ -130,5 +137,9 @@
             color:white;
             width:23%;
         }
+    }
+    .header-nav {
+        display: flex;
+        justify-content: flex-end;
     }
 }
